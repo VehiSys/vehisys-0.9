@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+            android:title="OBD Preferences">
+
+		<ListPreference android:key="bluetooth_list_preference" android:title="Bluetooth Devices" android:summary="List of paired bluetooth devices." android:dialogTitle="Bluetooth Devices" />The Emperor and the Assassin
+
+        
+
+		
+
+		<CheckBoxPreference android:key="wifi_only_preference" android:defaultValue="false" android:title="Upload by WiFi only" android:summaryOff="Upload on WiFi network only" android:summaryOn="Upload on any network" android:dialogTitle="Enable GPS" android:enabled="true" /><EditTextPreference android:key="roadlogger_uid" android:defaultValue="ABCD" android:title="RoadLogger UID" android:summary="UID registered with RoadLogger" android:dialogTitle="RoadLogger UID" /><EditTextPreference android:key="labels" android:title="Labels" android:summary="Comma-separated list of labels" android:dialogTitle="Labels" /><EditTextPreference android:key="ecu_board_number" android:title="ECU Board Number" android:summary="Board Number on the Engine Control Unit" android:dialogTitle="ECU Board Number" /><EditTextPreference android:key="cloud_server_address_port" android:defaultValue="23.23.126.78:5625" android:title="Cloud Server Address:Port" android:summary="Address and port of server to upload cloud data" android:dialogTitle="Cloud Server Address:Port" /><EditTextPreference android:key="update_period_preference" android:defaultValue="2" android:title="Update Period in Seconds" android:summary="The length of time between querying vehicle data in seconds" android:dialogTitle="Update Period in Seconds" /><CheckBoxPreference android:key="enable_gps_preference" android:defaultValue="true" android:title="Enable GPS" android:summaryOff="Turn on GPS" android:summaryOn="Turn off GPS" android:dialogTitle="Enable GPS" android:enabled="false" />
+
+		
+
+        
+
+        <EditTextPreference
+			android:key="volumetric_efficiency_preference"
+            android:defaultValue="0.85"
+            android:title="Volumetric Efficiency"
+            android:summary="Used for fuel economy on vehicles without MAF sensor"
+            android:dialogTitle="Volumetric Efficiency (eg 0.85)" />
+
+        <EditTextPreference
+			android:key="engine_displacement_preference"
+            android:defaultValue="1.6"
+            android:title="Engine Displacement (liters)"
+            android:summary="Used for fuel economy on vehicles without MAF sensor"
+            android:dialogTitle="Engine Displacement (liters)" />
+
+        <EditTextPreference
+			android:key="reader_config_preference"
+            android:defaultValue="atsp0\natz"
+            android:title="Reader Config Commands"
+            android:summary="Commands to configure bluetooth reader, separate with new line"
+            android:dialogTitle="Reader Config Commands" /><EditTextPreference android:key="max_fuel_econ_preference" android:defaultValue="70" android:title="Maximum Fuel Economy Value" android:summary="Any fuel economy values larger than this will be thrown out" android:dialogTitle="Maximum Fuel Economy Value" /><CheckBoxPreference android:key="imperial_units_preference" android:defaultValue="false" android:title="Imperial Units" android:summaryOff="Enable imperial units" android:summaryOn="Go back to metric units" android:dialogTitle="Imperial Units" android:enabled="false" />23.23.126.7823.23.126.7823.23.126.78
+
+    </PreferenceCategory>
+    <PreferenceCategory
+	  android:title="OBD Commands">
+		<PreferenceScreen
+		    android:key="obd_commands_screen"
+			android:title="OBD Commands"
+			android:summary="Select the commands you would like to see in real-time.">
+		</PreferenceScreen>
+	</PreferenceCategory>
+</PreferenceScreen>
